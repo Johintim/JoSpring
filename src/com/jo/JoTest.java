@@ -16,6 +16,8 @@ public class JoTest {
         userService.test();
         System.out.println("");
         System.out.println("开始测试AOP");
+
+        // TODO: 2022/3/16  由于使用的是JDK的动态代理，代理的其实是接口，因此下面在getBean时，拿的是AopInterface,而不是aopTestService
         AopInterface aopTestService = (AopInterface)joApplicationContext.getBean("aopTestService");
         aopTestService.test();
     }
