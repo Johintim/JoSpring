@@ -20,13 +20,15 @@ public class UserService implements InitializingBean, BeanNameAware {
     private String beanName;
 
     public void test() {
+        System.out.println("执行userService.test()----start----");
         System.out.println(beforeString);
         System.out.println(beanName);
+        System.out.println("执行userService.test()----end----");
     }
 
     @Override
     public void afterPropertiesSet() {
-        System.out.println("初始化");
+        System.out.println("afterPropertiesSet() => 初始化userService");
     }
 
     @Override

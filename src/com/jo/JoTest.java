@@ -14,7 +14,8 @@ public class JoTest {
         JoApplicationContext joApplicationContext = new JoApplicationContext(AppConfig.class);
         UserService userService = (UserService)joApplicationContext.getBean("userService");
         userService.test();
-
+        System.out.println("");
+        System.out.println("开始测试AOP");
         AopInterface aopTestService = (AopInterface)joApplicationContext.getBean("aopTestService");
         aopTestService.test();
     }

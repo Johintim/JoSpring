@@ -22,6 +22,7 @@ public class JoApplicationContext {
 
     public JoApplicationContext(Class configClass) {
         // 扫描componentScan路径上，所有带有@component注解的bean-->生成beanDefinition -->beanDefinitionMap
+        // 同时初始化beanPostProcessor添加到beanPostProcessorList集合中
         scan(configClass);
 
         //将单例对象放入单例池中
